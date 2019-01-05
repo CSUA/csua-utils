@@ -14,6 +14,6 @@ BASEDN="ou=People,$DC"
 cat << EOF | ldapmodify -D "uid=$USER,$BASEDN" -W -x
 dn: cn=$TARGETGROUP,ou=Group,$DC
 changetype: modify
-delete: memberUid
+add: memberUid
 memberUid: $TARGETUSER
 EOF
