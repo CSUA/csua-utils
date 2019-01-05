@@ -12,4 +12,4 @@ fi
 TARGETUSER=$1
 BASEDN="ou=People,dc=csua,dc=berkeley,dc=edu"
 
-ldappasswd -D "uid=$USER,$BASEDN" -W -x -S "uid=$TARGETUSER,$BASEDN"
+ldappasswd -D "uid=$USER,$BASEDN" -W -x
